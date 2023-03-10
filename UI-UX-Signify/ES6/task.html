@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        //define the class in javascript
+        class BasicCal{
+
+            constructor(element_1,element_2)
+            {
+
+                this.element_1=element_1;
+                this.element_2=element_2;
+
+                console.log("First element equals: --> "+this.element_1);
+                console.log("Second element equals: --> "+this.element_2);
+
+            }
+            add()
+            {
+                return this.element_1+this.element_2;
+            }
+            sub()
+            {
+                return this.element_1-this.element_2;
+            }
+            mul()
+            {
+                return this.element_1*this.element_2;
+            }
+            div()
+            {
+                return this.element_1+this.element_2;
+            }
+
+        }
+        class SciCal extends BasicCal{
+
+            constructor(x,y)
+            {
+                this.x=x;
+                this.y=y;
+                console.log("First element equals: --> "+this.x);
+                console.log("Second element equals: --> "+this.y);
+
+            }
+            sin()
+            {
+                return Math.sinh(x);
+
+            }
+            cos()
+            {
+                return Math.cosh(x);
+
+            }
+            tan()
+            {
+                return Math.tanh(x);
+
+            }
+            log()
+            {
+                return Math.log(y) / Math.log(x);
+            }
+
+        }
+        console.log("++++++++++++++++++++++++++++++++++++++++++BasicCal is being called++++++++++++++++++++++++++++++++++++++++++");
+        let b=new BasicCal(33,2);
+        console.log("Addition of elements -->"+b.add());
+        console.log("Subtraction of elements -->"+b.sub());
+        console.log("Multiplication of elements -->"+b.mul());
+        console.log("Division of elements -->"+b.div());
+        console.log("++++++++++++++++++++++++++++++++++++++++++SciCal is being called++++++++++++++++++++++++++++++++++++++++++");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

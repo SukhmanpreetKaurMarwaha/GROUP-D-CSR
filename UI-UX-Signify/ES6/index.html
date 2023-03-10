@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+   
+     // define the class in Javascript
+
+     class Person{
+
+
+        // can only declarfe @ class level properties 
+
+          #test;
+
+        constructor(name,age){
+
+            this.name=name;
+            this.age=age;
+            this.#test=100;
+            console.log("Person object is inint-->");
+            console.log("Name of the Person-->" +this.name);
+            console.log("Age of the Person-->" +this.age);
+            console.log("print the private here -->" +this.#test);
+        }
+
+   // private method declare here 
+
+      #stuffPrivate(){
+
+           console.log("call the private one method");
+         
+        return this.#test;
+      }
+
+
+       // define the public method here 
+
+        getConCat(){
+
+            console.log('call the public method');
+            return this.conCat();
+        }
+
+        conCat(){
+
+
+            return "Name of the Person" + "" +this.name + "Age of the Person" + "" +this.age;
+        }
+
+
+        // previledged method here :--> 
+
+         preMethod(){
+     
+             console.log("this method exposed the private method outside the scope of class as privlexdged");
+
+            return this.#stuffPrivate();
+         }
+
+
+         // static impl 
+
+         static myStatic(){
+
+
+            return " I am the Static imple-->";
+         }
+
+     }
+
+    // End the definatin of class & use protgotype to get write the extension in person class 
+
+// syntax to add prototype 
+
+     Person.prototype.test1=200; // property test1
+     Person.prototype.sayHello=function(){
+
+        console.log(" create the extension using prototype here -->");
+        return this.test1;
+     }
+
+
+//  Inheritance here 
+
+     class Student extends Person{
+
+
+          testStudentMethod(){
+
+
+            return "i am the student class here -->"
+          }
+
+     }
+          // create the instance of the person class here 
+
+     // let p=new Person('Full Stack Trainig',15);
+       let s=new Student('Full Stack Trainig',15);
+      // call the public method here 
+
+      console.log("call the public method here -->" +s.getConCat());
+      // call the private one here 
+
+      console.log("call the private one here -->" +s.preMethod())
+// call the static 
+     console.log("call the static impl -->" +Person.myStatic());
+
+     // call the proptotype method using object 
+
+     console.log("call the prototype here -->" +s.sayHello());
+
+     // call the student class method here 
+    console.log("call the student class methods here -->" +s.testStudentMethod());
+
+</script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

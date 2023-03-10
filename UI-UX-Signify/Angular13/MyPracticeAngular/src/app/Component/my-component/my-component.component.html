@@ -1,0 +1,33 @@
+<h3>ADD GRADE</h3>
+<form ngForm>
+    <div class="form-group">
+        <label for="age"><b>STUDENT ID</b></label>
+        <input type="number"  class="form-control" id="age"
+               [(ngModel)]="model.age" name="age" required="true">
+      </div>
+    <div class="form-group">
+      <label id=gra for="name"><b>GRADE</b></label>
+      <input type="text" class="form-control" id="name"
+             [(ngModel)]="model.name" name="name" required="true">
+    </div>
+    
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary" (click)="createCustomer()">Submit</button>
+    
+    <!-- <p>
+        Customer Details
+    </p> -->
+    <!-- <div>
+        <ol>
+
+            <li *ngFor='let cust of custArray;index as i'>
+               {{cust.name}}<b>||||</b>{{cust.age}}
+
+               <button type="button" class="btn btn-primary" (click)="update(i)">Update</button>
+               <button type="button" class="btn btn-primary" (click)="delete(i)">Delete</button>
+            </li>
+      
+         </ol>
+    </div> -->
+</form>

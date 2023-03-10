@@ -1,0 +1,22 @@
+<h5>CLICK TO VIEW STUDENTS ENROLLED IN YOUR COURSE</h5>
+
+<div class="gra"><button type="submit" class="btn btn-primary" (click)="getUserDetails()">View</button>
+</div>
+
+
+<div>
+    <table class="table table-bordered border border-success p-2 mb-2" >
+       
+            <tr>
+              <th class="border border-3 ">Student ID</th>
+              <th class="border border-3" >Student Name</th>
+              
+            </tr>
+            <tr *ngFor='let user of getData'>
+                <td class="border border-3">{{user.id}}</td>
+                <td class="border border-3">{{user.first_name}}</td>
+            </tr>
+           
+          
+    </table>
+</div>
